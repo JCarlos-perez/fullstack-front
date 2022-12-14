@@ -1,0 +1,56 @@
+* {
+    font-family: Verdana;
+    }
+
+.logo {
+    display: inline-block
+}
+
+.titulo_h1 {
+    display: inline-block;
+    color: red;
+}
+
+.titulo_h2 {
+    color: red;
+}
+
+.datos_cliente {
+    background-color: #55ccff;
+}
+
+.datos_pedido {
+    background-color: #40ccbb;
+}
+
+
+label {
+    display: inline-block;
+    width: 240px;
+  }
+
+.datos_cliente input  {
+    width: 188px;
+    height: 22px;
+}
+
+select  {
+    width: 188px;
+    height: 22px;
+}
+
+#p_fec_nac {
+    width: 191px;
+    height: 22px;
+}
+
+textarea {
+    width: 191px;
+    height: 88px;
+}
+
+button {
+    width: 170px;
+    height: 25px;
+    margin-top: 25px;
+}
