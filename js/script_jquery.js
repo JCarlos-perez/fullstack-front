@@ -22,10 +22,26 @@ $("#formulario").submit("click", function(e) {
     }
 )
 
-$("#p_nombre").onchange (
+$("#p_nombre").on ('change', function() {
     pintar_label_negro("nombre")
-)
+})
 
-$("#p_apellidos").onchange( 
+$("#p_apellidos").on ('change', function() { 
     pintar_label_negro("apellidos")
-)
+})
+
+$("#tamano").on ('change', function(){
+    console.log(this.value)
+    // Aqui va la llamada AJAX con JQuery
+    $.ajax({
+        method: "POST",
+        url: "http://localhost:5000/checksize",
+        data: { size: this.value }
+      }).done(function(data) {
+        var span = document.getElementById("resultado_tamano");
+        span.textContent=data;
+      }).fail(function() {
+        alert("Fallo en la llamada AJAX")
+      })
+    })
+   
