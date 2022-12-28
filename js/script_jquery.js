@@ -40,6 +40,11 @@ $("#tamano").on ('change', function(){
       }).done(function(data) {
         var span = document.getElementById("resultado_tamano");
         span.textContent=data;
+        if (data == "Disponible") {
+            $(span).css("color","green")
+        } else {
+            $(span).css("color","red")
+        }
       }).fail(function() {
         alert("Fallo en la llamada AJAX")
       })
